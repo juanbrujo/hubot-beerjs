@@ -13,7 +13,7 @@
     "santiago"
   ],
   "dependencies": {
-    "cheerio": "^0.20.0",
+    "cheerio": "^0.20.0"
   },
   "author": "Jorge Epuñan <juanbrujo@gmail.com> (http://www.csslab.cl)",
   "license": "MIT",
