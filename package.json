@@ -1,0 +1,24 @@
+{
+  "name": "hubot-beerjs",
+  "version": "0.0.1",
+  "description": "BeerJS Santiago Hubot script",
+  "main": "hubot-beerjs.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanbrujo/hubot-beerjs.git"
+  },
+  "keywords": [
+    "hubot",
+    "beerjs",
+    "santiago"
+  ],
+  "dependencies": {
+    "cheerio": "^0.20.0",
+  },
+  "author": "Jorge Epuñan <juanbrujo@gmail.com> (http://www.csslab.cl)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juanbrujo/hubot-beerjs/issues"
+  },
+  "homepage": "https://github.com/juanbrujo/hubot-beerjs#readme"
+}
