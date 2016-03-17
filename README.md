@@ -1,6 +1,8 @@
-# Hubot BeerJS Santiago
+# Hubot BeerJS Santiago 🍺 
 
 **BeerJS Santiago Hubot script. Despliega la información de la actual edición de BeerJS Santiago, la con más frecuencia del mundo.**
+
+![BeerJS Logo](https://raw.githubusercontent.com/beerjs/meta/master/assets/beerjs.png)
 
 ### Instalación:
 
