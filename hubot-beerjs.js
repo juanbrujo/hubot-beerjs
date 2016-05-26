@@ -30,41 +30,43 @@ module.exports = function(robot) {
 
   robot.respond(/beerjs (\w+)/i, function(res) {
 
-  	var suffix = res.match[1];
+    var suffix = res.match[1];
 
-  	needle.get(file, function(error, response) {
-		  if (!error && response.statusCode == 200) {
+    needle.get(file, function(error, response) {
+      if (!error && response.statusCode == 200) {
 
-		  	var obj = JSON.parse(response.body);
+        var obj = JSON.parse(response.body);
 
-	  	 	if ( suffix === "fecha" || suffix === "cuando") {
-			  	res.send(">*" + obj.evento + ":* " + obj.fecha);
-			 	}
-			 	else if ( suffix === "donde" || suffix === "lugar" ) {
-			 		res.send(">*" + obj.evento + ":* " + obj.donde + " (" + obj.direccion + ")");
-	 				res.send("http://maps.google.com/maps/api/staticmap?markers=" + encodeURIComponent(obj.direccion) + "&size=600x600&maptype=roadmap&sensor=false&zoom=16&format=png"); // TODO
+        if ( suffix === "fecha" || suffix === "cuando") {
+          res.send(">*" + obj.evento + ":* " + obj.fecha);
+        }
+        else if ( suffix === "donde" || suffix === "lugar" ) {
+          res.send(">*" + obj.evento + ":* " + obj.donde + " (" + obj.direccion + ")");
+          res.send("http://maps.google.com/maps/api/staticmap?markers=" + encodeURIComponent(obj.direccion) + "&size=600x600&maptype=roadmap&sensor=false&zoom=16&format=png"); // TODO
 
-			 	}
-			 	else if ( suffix === "tema" ) {
-			 		res.send(">*" + obj.evento + ":* " + obj.tema);
-			 	}
-			 	else if ( suffix === "info" || suffix === "todo" ) {
+        }
+        else if ( suffix === "tema" ) {
+          res.send(">*" + obj.evento + ":* " + obj.tema);
+        }
+        else if ( suffix === "registro" ) {
+          res.send(">*" + obj.evento + ":* regístrate gratis en " + obj.registro);
+        }
+        else if ( suffix === "info" || suffix === "todo" ) {
           message = ""
-			 		for(var i in obj){
-			 			if(obj[i] !== '') {
+          for(var i in obj){
+            if(obj[i] !== '') {
               message += ">*" + i + ":* " + obj[i] + "\n";
             }
           }
-			 		res.send(message);
-				}
-				else {
-					res.send("¿Ayuda? Comandos: @hubot beerjs [fecha|cuando, donde|lugar, tema]");
-				}
+          res.send(message);
+        }
+        else {
+          res.send("¿Ayuda? Comandos: @hubot beerjs [fecha|cuando, donde|lugar, tema, registro]");
+        }
 
-			}
+      }
 
-		});
-
+    });
 
   });
 
