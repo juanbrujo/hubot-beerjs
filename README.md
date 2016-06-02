@@ -1,13 +1,11 @@
-# Hubot BeerJS Santiago 🍺 
+# Hubot Cachipún 
 
-**BeerJS Santiago Hubot script. Despliega la información de la actual edición de BeerJS Santiago, la con más frecuencia del mundo.**
-
-![BeerJS Logo](https://raw.githubusercontent.com/beerjs/meta/master/assets/beerjs.png)
+**Juega cachipún (piedra|papel|tijera) contra tu hubot.**
 
 ### Instalación:
 
 ````
-$ npm install hubot-beerjs --save
+$ npm install hubot-cachipun --save
 ````
 
 Agregar en `external-scripts.json`:
@@ -15,31 +13,25 @@ Agregar en `external-scripts.json`:
 ````
 [
   ..
-  "hubot-beerjs"
+  "hubot-cachipun"
 ]
 ````
 
 ### Uso:
 
 ````
-hubot> hubot beerjs info|todo
-hubot> hubot beerjs fecha|cuando
-hubot> hubot beerjs donde|lugar
-hubot> hubot beerjs tema
+hubot> hubot cachipun piedra
+hubot> hubot cachipun papel
+hubot> hubot cachipun tijera
 ````
 
 **Ejemplo:**
 
 ````
-hubot> hubot beerjs info
+hubot> hubot cachipun piedra
 
-hubot> ​*evento:*​ BeerJS Santiago #11 :beerjs:
-hubot> ​*fecha:*​ sábado 12 de marzo 2016
-hubot> ​*donde:*​ Parque Padre Hurtado (ex Intercomunal)
-hubot> ​*direccion:*​ Av. Francisco Bilbao 7865 - La Reina, Santiago.
-hubot> ​*hora:*​ desde 12:30 hrs
-hubot> ​*tema:*​ JS en este 2016
-hubot> ​*requisito:*​ Trae tu comida y tu bebestible
+hubot> hubot escoge tijera
+hubot> ​Piedra rompe tijera. *Ganaste*
 ````
 
 ### Licencia:

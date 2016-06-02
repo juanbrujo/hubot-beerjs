@@ -1,25 +1,22 @@
 {
-  "name": "hubot-beerjs",
-  "version": "0.0.2",
-  "description": "BeerJS Santiago Hubot script",
-  "main": "hubot-beerjs.js",
+  "name": "hubot-cachipun",
+  "version": "0.0.1",
+  "description": "Juega cachipún (piedra|papel|tijera) contra tu hubot",
+  "main": "cachipun.coffee",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/juanbrujo/hubot-beerjs.git"
+    "url": "git+https://github.com/juanbrujo/hubot-cachipun.git"
   },
   "keywords": [
     "hubot",
-    "beerjs",
-    "santiago"
+    "cachipun"
   ],
   "dependencies": {
-    "cheerio": "^0.20.0",
-    "needle": "^1.0.0"
   },
   "author": "Jorge Epuñan <juanbrujo@gmail.com> (http://www.csslab.cl)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/juanbrujo/hubot-beerjs/issues"
+    "url": "https://github.com/juanbrujo/hubot-cachipun/issues"
   },
-  "homepage": "https://github.com/juanbrujo/hubot-beerjs#readme"
+  "homepage": "https://github.com/juanbrujo/hubot-cachipun#readme"
 }
