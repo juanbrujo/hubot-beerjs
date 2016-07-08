@@ -14,31 +14,32 @@
 //   hubot beerjs tema
 //
 // Notes:
-//   ©2015 beerjssantiago
-//   https://github.com/beerjs/santiago/
+//   ©2015 Jorge Epuñan
+//   https://github.com/juanbrujo/
 //
 // Author:
 //   @jorgeepunan
 
-var needle = require('needle');
+const needle = require('needle');
 
 // este es el repositorio del json (estático) que se parsea con la información necesaria, hosteado en GitHub.
 // revísalo para que conozcas la simple estructura que contiene la información y modifícala según tus necesidades.
-var file = 'https://raw.githubusercontent.com/beerjs/santiago/master/beerjs.json';
+const file = 'https://raw.githubusercontent.com/beerjs/santiago/master/beerjs.json';
 
 module.exports = function(robot) {
+  'use strict';
 
-  robot.respond(/beerjs (\w+)/i, function(res) {
+  robot.respond(/beerjs (\w+)/i, res => {
 
-    var suffix = res.match[1];
+    const suffix = res.match[1];
 
-    needle.get(file, function(error, response) {
+    needle.get(file, (error, response) => {
       if (!error && response.statusCode == 200) {
 
-        var obj = JSON.parse(response.body);
+        const obj = JSON.parse(response.body);
 
         if ( suffix === "fecha" || suffix === "cuando") {
-        	res.send(">*" + obj.evento + ":* " + obj.fecha);
+          res.send(">*" + obj.evento + ":* " + obj.fecha);
         }
         else if ( suffix === "donde" || suffix === "lugar" ) {
           res.send(">*" + obj.evento + ":* " + obj.donde + " (" + obj.direccion + ")");
@@ -52,8 +53,8 @@ module.exports = function(robot) {
           res.send(">*" + obj.evento + ":* regístrate gratis en " + obj.registro);
         }
         else if ( suffix === "info" || suffix === "todo" ) {
-          message = ""
-          for(var i in obj){
+          let message = ""
+          for(const i in obj){
             if(obj[i] !== '') {
               message += ">*" + i + ":* " + obj[i] + "\n";
             }
