@@ -1,11 +1,11 @@
-# Hubot Cachipún 
+# Hubot BeerJS 
 
-**Juega cachipún (piedra|papel|tijera) contra tu hubot.**
+**Expone info de la próxima edición de [BeerJS Santiago](http://www.beerjs.cl/) directo a Slack.**
 
 ### Instalación:
 
 ````
-$ npm install hubot-cachipun --save
+$ npm install hubot-beerjs --save
 ````
 
 Agregar en `external-scripts.json`:
@@ -13,25 +13,26 @@ Agregar en `external-scripts.json`:
 ````
 [
   ..
-  "hubot-cachipun"
+  "hubot-beerjs"
 ]
 ````
 
 ### Uso:
 
 ````
-hubot> hubot cachipun piedra
-hubot> hubot cachipun papel
-hubot> hubot cachipun tijera
+hubot> hubot beerjs info
 ````
 
 **Ejemplo:**
 
 ````
-hubot> hubot cachipun piedra
+hubot> hubot beerjs info
 
-hubot> hubot escoge tijera
-hubot> ​Piedra rompe tijera. *Ganaste*
+>*evento:* BeerJS Santiago #16 :beerjs:
+>*fecha:* Agosto 2016
+>*donde:* *en planificación*
+>*hora:* desde las 19:30 hrs.
+
 ````
 
 ### Licencia:
